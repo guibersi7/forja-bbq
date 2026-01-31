@@ -3,14 +3,14 @@
 
 :root {
   /* Igreja Geração Eleita - Dark Premium Theme */
-  --bg-primary: #0A1F0A;
-  --bg-secondary: #112911;
-  --bg-highlight: #1A3A1A;
-  --text-primary: #F5F9F5;
-  --text-secondary: #C9D8C9;
-  --text-muted: #8FA98F;
+  --bg-primary: #002321;
+  --bg-secondary: #003432;
+  --bg-highlight: #004543;
+  --text-primary: #F5F9F9;
+  --text-secondary: #C9D8D7;
+  --text-muted: #8FA9A8;
   --accent-main: #FFFFFF;
-  --accent-light: #D4E4D4;
+  --accent-light: #D4E4E3;
   --accent-gold: #D4AF37;
   --error: #A83232;
 }
@@ -58,7 +58,7 @@ html {
 /* Selection */
 ::selection {
   background: #D4AF37;
-  color: #0A1F0A;
+  color: #002321;
 }
 
 /* Scrollbar */
@@ -66,10 +66,10 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A1F0A;
+  background: #002321;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1A3A1A;
+  background: #004543;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
