@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* Igreja Geração Eleita - Dark Premium Theme */
+  --bg-primary: #0A1F0A;
+  --bg-secondary: #112911;
+  --bg-highlight: #1A3A1A;
+  --text-primary: #F5F9F5;
+  --text-secondary: #C9D8C9;
+  --text-muted: #8FA98F;
+  --accent-main: #FFFFFF;
+  --accent-light: #D4E4D4;
+  --accent-gold: #D4AF37;
+  --error: #A83232;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-montserrat);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-highlight: var(--bg-highlight);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-main: var(--accent-main);
+  --color-accent-light: var(--accent-light);
+  --color-accent-gold: var(--accent-gold);
+}
+
+@layer base {
+  * {
+    @apply border-bg-highlight;
+  }
+  body {
+    @apply bg-bg-primary text-text-primary font-sans overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5F9F5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Selection */
+::selection {
+  background: #D4AF37;
+  color: #0A1F0A;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1F0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A3A1A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
