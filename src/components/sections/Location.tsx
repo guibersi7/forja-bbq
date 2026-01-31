@@ -15,7 +15,7 @@ export function Location() {
   const embedUrl = `https://www.google.com/maps?q=${ADDRESS_ENCODED}&output=embed`;
 
   return (
-    <section id="local" className="relative py-24 md:py-32 bg-bg-primary noise">
+    <section id="local" className="relative py-24 md:py-32 bg-bg-primary noise overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           ref={ref}

@@ -11,7 +11,7 @@ export function CTASection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-16 md:py-24 bg-bg-secondary">
+    <section className="py-16 md:py-24 bg-bg-secondary overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           ref={ref}

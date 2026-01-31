@@ -9,7 +9,7 @@ import { Location } from "@/components/sections/Location";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header />
       <main>
         <Hero />
@@ -20,6 +20,6 @@ export default function Home() {
         <Location />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

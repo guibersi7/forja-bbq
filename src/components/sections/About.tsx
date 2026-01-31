@@ -9,7 +9,7 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="sobre" className="relative py-24 md:py-32 bg-bg-secondary noise">
+    <section id="sobre" className="relative py-24 md:py-32 bg-bg-secondary noise overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <div ref={ref} className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           {/* Left - Text */}
