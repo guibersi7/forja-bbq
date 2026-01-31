@@ -181,7 +181,7 @@ Aguardo confirmação! 🙏`;
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link
-              href="/"
+              href="/forja/forja-bbq"
               className="flex items-center gap-2 text-text-secondary hover:text-accent-fire transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />

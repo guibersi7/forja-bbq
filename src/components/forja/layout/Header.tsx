@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { href: "#sobre", label: "O EVENTO" },
   { href: "#forja", label: "FORJA" },
-  { href: "/cardapio", label: "CARDÁPIO" },
-  { href: "/ige-kids", label: "IGE KIDS" },
+  { href: "/forja/cardapio", label: "CARDÁPIO" },
+  { href: "/forja/ige-kids", label: "IGE KIDS" },
   { href: "#local", label: "LOCAL" },
 ];
 
@@ -35,7 +35,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="relative z-50">
+            <Link href="/forja/forja-bbq" className="relative z-50">
               <Image
                 src="/images/preview-removebg-preview.png"
                 alt="Forja BBQ"

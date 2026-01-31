@@ -13,41 +13,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Forja BBQ - Festival da Costela | IGE Igreja Geração Eleita",
+  metadataBase: new URL("https://igrejageracaoeleita.com"),
+  title: {
+    default: "IGE - Igreja Geração Eleita | Sorocaba",
+    template: "%s | IGE - Igreja Geração Eleita",
+  },
   description:
-    "Da brasa à mesa, para o Reino. Participe do Forja BBQ, o maior festival de costela da IGE! Toda arrecadação será destinada às obras de ampliação da igreja. 21 de Fevereiro, 14h às 21h no Rancho IGE.",
+    "Uma igreja apaixonada por Jesus, comprometida com o Reino e dedicada a transformar vidas. Venha nos visitar em Sorocaba!",
   keywords: [
-    "Forja BBQ",
-    "Festival da Costela",
-    "IGE",
+    "Igreja",
     "Igreja Geração Eleita",
-    "Forja",
-    "Ministério de Homens",
-    "Churrasco",
-    "Evento Cristão",
+    "IGE",
+    "Sorocaba",
+    "Igreja Evangélica",
+    "Culto",
+    "Jesus",
+    "Cristão",
   ],
   authors: [{ name: "IGE - Igreja Geração Eleita" }],
   openGraph: {
-    title: "Forja BBQ - Festival da Costela",
+    title: "IGE - Igreja Geração Eleita",
     description:
-      "Da brasa à mesa, para o Reino. Participe do Forja BBQ! 21 de Fevereiro, 14h às 21h no Rancho IGE.",
+      "Uma igreja apaixonada por Jesus, comprometida com o Reino e dedicada a transformar vidas.",
     type: "website",
     locale: "pt_BR",
-    images: [
-      {
-        url: "/images/logo.png",
-        width: 800,
-        height: 800,
-        alt: "Forja BBQ - Festival da Costela",
-      },
-    ],
+    siteName: "Igreja Geração Eleita",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Forja BBQ - Festival da Costela",
+    title: "IGE - Igreja Geração Eleita",
     description:
-      "Da brasa à mesa, para o Reino. Participe do Forja BBQ! 21 de Fevereiro no Rancho IGE.",
-    images: ["/images/logo.png"],
+      "Uma igreja apaixonada por Jesus, comprometida com o Reino e dedicada a transformar vidas.",
   },
   robots: {
     index: true,

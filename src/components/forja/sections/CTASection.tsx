@@ -36,7 +36,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link
-              href="/cardapio"
+              href="/forja/cardapio"
               className="group block bg-bg-highlight rounded-2xl p-8 border border-accent-metal/20 hover:border-accent-fire/50 transition-all hover:scale-[1.02]"
             >
               <div className="flex items-start gap-5">
@@ -79,7 +79,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <Link
-              href="/ige-kids"
+              href="/forja/ige-kids"
               className="group block bg-gradient-to-br from-[#1a1a2e] to-bg-primary rounded-2xl p-8 border border-accent-metal/20 hover:border-[#FF6B9D]/50 transition-all hover:scale-[1.02]"
             >
               <div className="flex items-start gap-5">
