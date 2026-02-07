@@ -93,11 +93,12 @@ export function IgeKids() {
                         className="relative h-[400px] bg-bg-secondary rounded-3xl border border-accent-metal/20 overflow-hidden flex items-center justify-center"
                     >
                         <Image
-                            src="/images/area-kids.png"
+                            src="/images/area-kids.webp"
                             alt="Área Kids com brinquedos infláveis"
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={75}
                         />
 
                         {/* Decorative circles */}

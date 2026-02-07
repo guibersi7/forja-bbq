@@ -233,11 +233,12 @@ Aguardo confirmação! 🙏`;
             </Link>
             <Link href="/">
               <Image
-                src="/images/preview-removebg-preview.png"
+                src="/images/preview-removebg-preview.webp"
                 alt="Forja BBQ"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 className="h-10 w-auto"
+                sizes="40px"
               />
             </Link>
             <div className="w-20" />

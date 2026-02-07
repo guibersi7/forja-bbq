@@ -36,11 +36,12 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="relative z-50">
               <Image
-                src="/images/preview-removebg-preview.png"
+                src="/images/preview-removebg-preview.webp"
                 alt="Forja BBQ"
-                width={60}
-                height={60}
+                width={48}
+                height={48}
                 className="h-12 w-auto"
+                sizes="48px"
               />
             </Link>
 

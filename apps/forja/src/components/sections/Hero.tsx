@@ -79,12 +79,13 @@ export function Hero() {
             className="mb-6"
           >
             <Image
-              src="/images/preview-removebg-preview.png"
+              src="/images/preview-removebg-preview.webp"
               alt="Forja BBQ - Festival da Costela"
               width={500}
               height={500}
               className="w-[280px] md:w-[400px] lg:w-[500px] h-auto"
               priority
+              quality={80}
               sizes="(max-width: 768px) 280px, (max-width: 1024px) 400px, 500px"
             />
           </motion.div>

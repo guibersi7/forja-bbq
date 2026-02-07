@@ -9,11 +9,12 @@ export function Footer() {
           {/* Logo & Info */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <Image
-              src="/images/preview-removebg-preview.png"
+              src="/images/preview-removebg-preview.webp"
               alt="Forja BBQ"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="h-16 w-auto"
+              sizes="64px"
             />
             <p className="text-text-secondary text-sm text-center md:text-left">
               Da brasa à mesa, para o Reino.

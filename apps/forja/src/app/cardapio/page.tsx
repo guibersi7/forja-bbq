@@ -24,7 +24,7 @@ const foodItems: FoodItem[] = [
     name: "Forja Beef",
     description: "R$ 22",
     price: 22,
-    image: "/images/Forja-beef.png",
+    image: "/images/Forja-beef.webp",
     category: "Lanches",
   },
   {
@@ -32,7 +32,7 @@ const foodItems: FoodItem[] = [
     name: "Forja Pork",
     description: "R$ 20",
     price: 20,
-    image: "/images/Forja-Pork.png",
+    image: "/images/Forja-Pork.webp",
     category: "Lanches",
   },
   {
@@ -40,7 +40,7 @@ const foodItems: FoodItem[] = [
     name: "Lanche BBQ",
     description: "R$ 18",
     price: 18,
-    image: "/images/Lanche-BBQ.png",
+    image: "/images/Lanche-BBQ.webp",
     category: "Lanches",
   },
   {
@@ -48,7 +48,7 @@ const foodItems: FoodItem[] = [
     name: "X-Burger Kids",
     description: "R$ 15",
     price: 15,
-    image: "/images/Burguer-Kids.png",
+    image: "/images/Burguer-Kids.webp",
     category: "Lanches",
   },
   // Combos
@@ -57,7 +57,7 @@ const foodItems: FoodItem[] = [
     name: "Forja Beef + Refrigerante",
     description: "Combo com refrigerante (Economia de R$ 2,00)",
     price: 28,
-    image: "/images/Forja-beef.png",
+    image: "/images/Forja-beef.webp",
     category: "Combos",
   },
   {
@@ -65,7 +65,7 @@ const foodItems: FoodItem[] = [
     name: "Forja Pork + Refrigerante",
     description: "Combo com refrigerante (Economia de R$ 2,00)",
     price: 26,
-    image: "/images/Forja-Pork.png",
+    image: "/images/Forja-Pork.webp",
     category: "Combos",
   },
   {
@@ -73,7 +73,7 @@ const foodItems: FoodItem[] = [
     name: "Lanche BBQ + Refrigerante",
     description: "Combo com refrigerante (Economia de R$ 2,00)",
     price: 24,
-    image: "/images/Lanche-BBQ.png",
+    image: "/images/Lanche-BBQ.webp",
     category: "Combos",
   },
   {
@@ -81,7 +81,7 @@ const foodItems: FoodItem[] = [
     name: "X-Burger Kids + Refrigerante",
     description: "Combo com refrigerante (Economia de R$ 2,00)",
     price: 21,
-    image: "/images/Burguer-Kids.png",
+    image: "/images/Burguer-Kids.webp",
     category: "Combos",
   },
   // Bebidas
@@ -90,7 +90,7 @@ const foodItems: FoodItem[] = [
     name: "Refrigerante",
     description: "R$ 8",
     price: 8,
-    image: "/images/refrigerante-1.png",
+    image: "/images/refrigerante-1.webp",
     category: "Bebidas",
   },
   {
@@ -98,7 +98,7 @@ const foodItems: FoodItem[] = [
     name: "Água",
     description: "R$ 6",
     price: 6,
-    image: "/images/agua.png",
+    image: "/images/agua.webp",
     category: "Bebidas",
   },
   {
@@ -106,7 +106,7 @@ const foodItems: FoodItem[] = [
     name: "Suco",
     description: "R$ 7",
     price: 7,
-    image: "/images/suco.png",
+    image: "/images/suco.webp",
     category: "Bebidas",
   },
 ];
@@ -172,11 +172,12 @@ Aguardo confirmação! 🙏`;
             </Link>
             <Link href="/">
               <Image
-                src="/images/preview-removebg-preview.png"
+                src="/images/preview-removebg-preview.webp"
                 alt="Forja BBQ"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 className="h-10 w-auto"
+                sizes="40px"
               />
             </Link>
             <div className="w-20" />
@@ -234,7 +235,8 @@ Aguardo confirmação! 🙏`;
                           alt={item.name}
                           fill
                           className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
+                          quality={75}
                         />
                       </div>
 
