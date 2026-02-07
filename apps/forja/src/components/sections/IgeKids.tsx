@@ -97,6 +97,7 @@ export function IgeKids() {
                             alt="Área Kids com brinquedos infláveis"
                             fill
                             className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
 
                         {/* Decorative circles */}
