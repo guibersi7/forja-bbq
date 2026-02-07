@@ -33,17 +33,9 @@
 }
 
 @layer base {
-  * {
-    @apply border-accent-metal/30;
-  }
   body {
     @apply bg-bg-primary text-text-primary font-sans overflow-x-hidden;
   }
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* Gradient text */
