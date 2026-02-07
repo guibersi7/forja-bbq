@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "motion/react";
 
 const navItems = [
   { href: "#sobre", label: "O EVENTO" },
@@ -64,17 +63,17 @@ export function Header() {
               className="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
               aria-label="Toggle menu"
             >
-              <motion.span
-                animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                className="w-6 h-0.5 bg-text-primary block"
+              <span
+                className="w-6 h-0.5 bg-text-primary block transition-all duration-300"
+                style={isOpen ? { transform: "rotate(45deg) translateY(6px)" } : undefined}
               />
-              <motion.span
-                animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-6 h-0.5 bg-text-primary block"
+              <span
+                className="w-6 h-0.5 bg-text-primary block transition-opacity duration-300"
+                style={isOpen ? { opacity: 0 } : undefined}
               />
-              <motion.span
-                animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                className="w-6 h-0.5 bg-text-primary block"
+              <span
+                className="w-6 h-0.5 bg-text-primary block transition-all duration-300"
+                style={isOpen ? { transform: "rotate(-45deg) translateY(-6px)" } : undefined}
               />
             </button>
           </div>
@@ -82,57 +81,38 @@ export function Header() {
       </header>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-bg-primary md:hidden"
-          >
-            <motion.nav
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              className="flex flex-col items-center justify-center h-full gap-8"
+      <div
+        className={`fixed inset-0 z-40 bg-bg-primary md:hidden transition-opacity duration-300 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <nav
+          className={`flex flex-col items-center justify-center h-full gap-8 transition-all duration-300 ${
+            isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+          }`}
+        >
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="text-text-primary text-2xl font-black tracking-wider hover:text-accent-fire transition-colors"
             >
-              {navItems.map((item, i) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + i * 0.05 }}
-                >
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-text-primary text-2xl font-black tracking-wider hover:text-accent-fire transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
+              {item.label}
+            </Link>
+          ))}
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="mt-8"
-              >
-                <Link
-                  href="#local"
-                  onClick={() => setIsOpen(false)}
-                  className="inline-flex items-center gap-2 bg-accent-fire hover:bg-accent-fire-hover text-white font-bold text-sm px-8 py-4 rounded-full transition-colors"
-                >
-                  COMO CHEGAR
-                </Link>
-              </motion.div>
-            </motion.nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <div className="mt-8">
+            <Link
+              href="#local"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex items-center gap-2 bg-accent-fire hover:bg-accent-fire-hover text-white font-bold text-sm px-8 py-4 rounded-full transition-colors"
+            >
+              COMO CHEGAR
+            </Link>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }

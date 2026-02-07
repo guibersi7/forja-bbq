@@ -42,6 +42,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link
+          rel="preload"
+          href="/images/preview-removebg-preview.webp"
+          as="image"
+          type="image/webp"
+        />
+      </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
         <SpeedInsights />
