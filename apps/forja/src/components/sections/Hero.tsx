@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -71,13 +70,8 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full px-4 py-20">
         <div className="max-w-6xl mx-auto flex flex-col items-center">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-6"
-          >
+          {/* Logo — visible immediately, no JS needed */}
+          <div className="mb-6 animate-hero-fade-in">
             <Image
               src="/images/preview-removebg-preview.webp"
               alt="Forja BBQ - Festival da Costela"
@@ -88,35 +82,20 @@ export function Hero() {
               quality={80}
               sizes="(max-width: 768px) 280px, (max-width: 1024px) 400px, 500px"
             />
-          </motion.div>
+          </div>
 
           {/* Tagline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-text-secondary text-base md:text-xl tracking-wide mb-8 text-center"
-          >
+          <p className="text-text-secondary text-base md:text-xl tracking-wide mb-8 text-center animate-hero-fade-up [animation-delay:300ms]">
             Da brasa à mesa, para o Reino.
-          </motion.p>
+          </p>
 
           {/* Countdown */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mb-10"
-          >
+          <div className="mb-10 animate-hero-fade-up [animation-delay:500ms]">
             <Countdown />
-          </motion.div>
+          </div>
 
           {/* Event Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-text-secondary text-sm md:text-base mb-10"
-          >
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-text-secondary text-sm md:text-base mb-10 animate-hero-fade-up [animation-delay:700ms]">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-accent-fire rounded-full" />
               21 DE FEVEREIRO
@@ -131,14 +110,10 @@ export function Hero() {
               <span className="w-2 h-2 bg-accent-fire rounded-full" />
               RANCHO IGE
             </span>
-          </motion.div>
+          </div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-          >
+          <div className="animate-hero-fade-up [animation-delay:900ms]">
             <Link
               href="#local"
               className="group relative inline-flex items-center gap-3 bg-accent-fire hover:bg-accent-fire-hover text-white font-bold text-sm md:text-base px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
@@ -158,26 +133,17 @@ export function Hero() {
                 />
               </svg>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-hero-fade-in [animation-delay:1200ms]">
         <div className="flex flex-col items-center gap-2 text-text-secondary/50">
           <span className="text-[10px] tracking-[0.3em]">SCROLL</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-px h-8 bg-gradient-to-b from-text-secondary/30 to-transparent"
-          />
+          <div className="w-px h-8 bg-gradient-to-b from-text-secondary/30 to-transparent animate-bounce-slow" />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

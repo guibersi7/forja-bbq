@@ -72,6 +72,29 @@
   background: #FF5E00;
 }
 
+/* Hero animations — pure CSS, no JS blocking */
+@keyframes hero-fade-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.animate-hero-fade-in {
+  animation: hero-fade-in 0.8s ease-out both;
+}
+.animate-hero-fade-up {
+  animation: hero-fade-up 0.6s ease-out both;
+}
+.animate-bounce-slow {
+  animation: bounce-slow 1.5s ease-in-out infinite;
+}
+
 /* Noise overlay - disabled on mobile for performance */
 .noise {
   position: relative;
