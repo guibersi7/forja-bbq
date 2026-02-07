@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -42,7 +42,7 @@ function Countdown() {
         { value: timeLeft.seconds, label: "SEG" },
       ].map((item, i) => (
         <div key={i} className="text-center">
-          <div className="bg-bg-secondary/80 backdrop-blur-sm border border-accent-metal/30 rounded-lg px-3 py-2 md:px-5 md:py-3 min-w-[60px] md:min-w-[80px]">
+          <div className="bg-bg-secondary/80 md:backdrop-blur-sm border border-accent-metal/30 rounded-lg px-3 py-2 md:px-5 md:py-3 min-w-[60px] md:min-w-[80px]">
             <span className="text-2xl md:text-4xl font-black text-accent-fire tabular-nums">
               {String(item.value).padStart(2, "0")}
             </span>

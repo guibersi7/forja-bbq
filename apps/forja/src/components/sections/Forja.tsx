@@ -1,8 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const quotes = [
   {
@@ -20,23 +16,17 @@ const quotes = [
 ];
 
 export function Forja() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="forja" className="relative py-24 md:py-32 bg-bg-primary noise overflow-hidden">
+    <section
+      id="forja"
+      className="relative py-24 md:py-32 bg-bg-primary noise overflow-hidden"
+    >
       {/* Background element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-bg-highlight/30 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16 md:mb-24"
-        >
+        <ScrollReveal duration={800} className="text-center mb-16 md:mb-24">
           <span className="text-accent-fire text-sm font-bold tracking-[0.2em] mb-4 block">
             MINISTÉRIO DE HOMENS
           </span>
@@ -45,7 +35,7 @@ export function Forja() {
             <br />
             <span className="text-gradient">FORJA?</span>
           </h2>
-        </motion.div>
+        </ScrollReveal>
 
         {/* Values */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-20">
@@ -67,14 +57,8 @@ export function Forja() {
               desc: "Somos chamados a ser homens comprometidos com o avanço do Reino de Deus em todas as áreas.",
             },
           ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group"
-            >
-              <div className="flex items-start gap-4">
+            <ScrollReveal key={i} duration={600} delay={i * 100}>
+              <div className="group flex items-start gap-4">
                 <span className="text-accent-fire font-black text-2xl md:text-3xl opacity-30 group-hover:opacity-100 transition-opacity">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -82,45 +66,41 @@ export function Forja() {
                   <h3 className="text-xl md:text-2xl font-black text-text-primary mb-3 group-hover:text-accent-fire transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-text-secondary leading-relaxed">{item.desc}</p>
+                  <p className="text-text-secondary leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
-            </motion.div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Quotes */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="border-t border-accent-metal/30 pt-16"
-        >
-          <div className="grid md:grid-cols-3 gap-8">
-            {quotes.map((quote, i) => (
-              <div key={i} className="text-center md:text-left">
-                <p className="text-text-secondary italic text-lg mb-3 leading-relaxed">
-                  &ldquo;{quote.text}&rdquo;
-                </p>
-                <span className="text-accent-fire text-sm font-bold">{quote.ref}</span>
-              </div>
-            ))}
+        <ScrollReveal duration={800} delay={400}>
+          <div className="border-t border-accent-metal/30 pt-16">
+            <div className="grid md:grid-cols-3 gap-8">
+              {quotes.map((quote, i) => (
+                <div key={i} className="text-center md:text-left">
+                  <p className="text-text-secondary italic text-lg mb-3 leading-relaxed">
+                    &ldquo;{quote.text}&rdquo;
+                  </p>
+                  <span className="text-accent-fire text-sm font-bold">
+                    {quote.ref}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-        </motion.div>
+        </ScrollReveal>
 
         {/* Big quote */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-20 text-center"
-        >
+        <ScrollReveal duration={800} delay={600} className="mt-20 text-center">
           <p className="text-3xl md:text-4xl lg:text-5xl font-black text-text-primary leading-tight">
             &ldquo;HOMENS DE VERDADE
             <br />
             <span className="text-gradient">CONSTROEM O REINO&rdquo;</span>
           </p>
-        </motion.div>
+        </ScrollReveal>
       </div>
     </section>
   );

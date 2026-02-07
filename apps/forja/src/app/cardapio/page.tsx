@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Minus, Plus, ShoppingBag, ArrowLeft } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5515997008154";
@@ -160,7 +160,7 @@ Aguardo confirmação! 🙏`;
   return (
     <div className="min-h-screen bg-bg-primary">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-bg-primary/95 backdrop-blur-md border-b border-accent-metal/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-bg-primary/95 md:backdrop-blur-md border-b border-accent-metal/20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <Link
@@ -294,7 +294,7 @@ Aguardo confirmação! 🙏`;
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-0 left-0 right-0 p-4 bg-bg-secondary/95 backdrop-blur-md border-t border-accent-metal/20"
+          className="fixed bottom-0 left-0 right-0 p-4 bg-bg-secondary/95 md:backdrop-blur-md border-t border-accent-metal/20"
         >
           <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
             <div>
