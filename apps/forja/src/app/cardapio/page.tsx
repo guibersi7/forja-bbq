@@ -18,117 +18,100 @@ interface FoodItem {
 }
 
 const foodItems: FoodItem[] = [
-  // Pratos Principais
+  // Lanches
   {
-    id: "costela-500",
-    name: "Porção de Costela 500g",
-    description: "Nossa especialidade! Costela bovina assada lentamente no fogo de chão, suculenta e saborosa.",
-    price: 45,
-    image: "/images/food/costela.jpg",
-    category: "Pratos Principais",
+    id: "forja-beef",
+    name: "Forja Beef",
+    description: "R$ 22",
+    price: 22,
+    image: "/images/Forja-beef.png",
+    category: "Lanches",
   },
   {
-    id: "costela-1kg",
-    name: "Porção de Costela 1kg",
-    description: "Para quem quer se deliciar! Costela bovina assada no fogo de chão para compartilhar.",
-    price: 85,
-    image: "/images/food/costela-grande.jpg",
-    category: "Pratos Principais",
-  },
-  {
-    id: "linguica",
-    name: "Porção de Linguiça",
-    description: "Linguiça artesanal grelhada na brasa, temperada com ervas finas.",
-    price: 25,
-    image: "/images/food/linguica.jpg",
-    category: "Pratos Principais",
-  },
-  {
-    id: "frango",
-    name: "Coxa e Sobrecoxa",
-    description: "Frango suculento temperado e assado na brasa até dourar.",
+    id: "forja-pork",
+    name: "Forja Pork",
+    description: "R$ 20",
     price: 20,
-    image: "/images/food/frango.jpg",
-    category: "Pratos Principais",
+    image: "/images/Forja-Pork.png",
+    category: "Lanches",
   },
-  // Acompanhamentos
   {
-    id: "arroz",
-    name: "Arroz Carreteiro",
-    description: "Arroz tradicional gaúcho com carne de sol desfiada.",
+    id: "lanche-bbq",
+    name: "Lanche BBQ",
+    description: "R$ 18",
+    price: 18,
+    image: "/images/Lanche-BBQ.png",
+    category: "Lanches",
+  },
+  {
+    id: "x-burger-kids",
+    name: "X-Burger Kids",
+    description: "R$ 15",
     price: 15,
-    image: "/images/food/arroz.jpg",
-    category: "Acompanhamentos",
+    image: "/images/Burguer-Kids.png",
+    category: "Lanches",
+  },
+  // Combos
+  {
+    id: "combo-beef",
+    name: "Forja Beef + Refrigerante",
+    description: "Combo com refrigerante (Economia de R$ 2,00)",
+    price: 28,
+    image: "/images/Forja-beef.png",
+    category: "Combos",
   },
   {
-    id: "vinagrete",
-    name: "Vinagrete",
-    description: "Molho fresquinho de tomate, cebola, pimentão e coentro.",
-    price: 8,
-    image: "/images/food/vinagrete.jpg",
-    category: "Acompanhamentos",
+    id: "combo-pork",
+    name: "Forja Pork + Refrigerante",
+    description: "Combo com refrigerante (Economia de R$ 2,00)",
+    price: 26,
+    image: "/images/Forja-Pork.png",
+    category: "Combos",
   },
   {
-    id: "farofa",
-    name: "Farofa Especial",
-    description: "Farofa crocante com bacon, ovos e temperos especiais.",
-    price: 10,
-    image: "/images/food/farofa.jpg",
-    category: "Acompanhamentos",
+    id: "combo-bbq",
+    name: "Lanche BBQ + Refrigerante",
+    description: "Combo com refrigerante (Economia de R$ 2,00)",
+    price: 24,
+    image: "/images/Lanche-BBQ.png",
+    category: "Combos",
   },
   {
-    id: "pao-alho",
-    name: "Pão de Alho",
-    description: "Pão crocante com manteiga de alho e ervas, grelhado na brasa.",
-    price: 8,
-    image: "/images/food/pao-alho.jpg",
-    category: "Acompanhamentos",
+    id: "combo-kids",
+    name: "X-Burger Kids + Refrigerante",
+    description: "Combo com refrigerante (Economia de R$ 2,00)",
+    price: 21,
+    image: "/images/Burguer-Kids.png",
+    category: "Combos",
   },
   // Bebidas
   {
     id: "refri-lata",
-    name: "Refrigerante Lata",
-    description: "Coca-Cola, Guaraná, Sprite ou Fanta.",
-    price: 6,
-    image: "/images/food/refri.jpg",
+    name: "Refrigerante",
+    description: "R$ 8",
+    price: 8,
+    image: "/images/refrigerante-1.png",
     category: "Bebidas",
   },
   {
     id: "agua",
-    name: "Água Mineral",
-    description: "Água mineral 500ml - com ou sem gás.",
-    price: 4,
-    image: "/images/food/agua.jpg",
+    name: "Água",
+    description: "R$ 6",
+    price: 6,
+    image: "/images/agua.png",
     category: "Bebidas",
   },
   {
     id: "suco",
-    name: "Suco Natural",
-    description: "Suco natural da fruta - Laranja, Limão ou Maracujá.",
-    price: 8,
-    image: "/images/food/suco.jpg",
+    name: "Suco",
+    description: "R$ 7",
+    price: 7,
+    image: "/images/suco.png",
     category: "Bebidas",
-  },
-  // Sobremesas
-  {
-    id: "churros",
-    name: "Churros",
-    description: "Churros crocante recheado com doce de leite.",
-    price: 8,
-    image: "/images/food/churros.jpg",
-    category: "Sobremesas",
-  },
-  {
-    id: "pudim",
-    name: "Pudim",
-    description: "Fatia de pudim de leite condensado cremoso.",
-    price: 10,
-    image: "/images/food/pudim.jpg",
-    category: "Sobremesas",
   },
 ];
 
-const categories = ["Pratos Principais", "Acompanhamentos", "Bebidas", "Sobremesas"];
+const categories = ["Lanches", "Combos", "Bebidas"];
 
 export default function CardapioPage() {
   const [cart, setCart] = useState<Record<string, number>>({});
@@ -244,14 +227,14 @@ Aguardo confirmação! 🙏`;
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="bg-bg-secondary rounded-2xl p-5 border border-accent-metal/20 hover:border-accent-fire/30 transition-colors"
                     >
-                      {/* Placeholder for image */}
-                      <div className="w-full h-32 bg-bg-highlight rounded-xl mb-4 flex items-center justify-center">
-                        <span className="text-4xl">
-                          {category === "Pratos Principais" && "🥩"}
-                          {category === "Acompanhamentos" && "🍚"}
-                          {category === "Bebidas" && "🥤"}
-                          {category === "Sobremesas" && "🍮"}
-                        </span>
+                      {/* Image */}
+                      <div className="relative w-full h-32 bg-bg-highlight rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
 
                       <h3 className="text-lg font-bold text-text-primary mb-1">

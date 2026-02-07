@@ -14,7 +14,7 @@ function Countdown() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-02-21T14:00:00").getTime();
+    const targetDate = new Date("2026-02-21T14:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();

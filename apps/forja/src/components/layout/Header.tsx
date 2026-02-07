@@ -9,7 +9,7 @@ const navItems = [
   { href: "#sobre", label: "O EVENTO" },
   { href: "#forja", label: "FORJA" },
   { href: "/cardapio", label: "CARDÁPIO" },
-  { href: "/ige-kids", label: "IGE KIDS" },
+  { href: "#ige-kids", label: "IGE KIDS" },
   { href: "#local", label: "LOCAL" },
 ];
 
@@ -28,9 +28,8 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-bg-primary/95 backdrop-blur-md border-b border-accent-metal/20" : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bg-primary/95 backdrop-blur-md border-b border-accent-metal/20" : "bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-20">

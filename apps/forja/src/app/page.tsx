@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Forja } from "@/components/sections/Forja";
 import { CTASection } from "@/components/sections/CTASection";
+import { IgeKids } from "@/components/sections/IgeKids";
 import { Details } from "@/components/sections/Details";
 import { Location } from "@/components/sections/Location";
 
@@ -15,6 +16,7 @@ export default function ForjaBBQPage() {
         <Hero />
         <About />
         <CTASection />
+        <IgeKids />
         <Forja />
         <Details />
         <Location />

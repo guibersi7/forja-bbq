@@ -28,7 +28,7 @@ export function CTASection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="flex w-full justify-center">
           {/* Cardápio CTA */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -73,7 +73,7 @@ export function CTASection() {
           </motion.div>
 
           {/* IGE Kids CTA */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -113,7 +113,7 @@ export function CTASection() {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
