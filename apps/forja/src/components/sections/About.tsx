@@ -34,7 +34,7 @@ export function About() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { number: "100%", label: "PARA A OBRA" },
-                { number: "7H", label: "DE EVENTO" },
+                { number: "6H", label: "DE EVENTO" },
                 { number: "0", label: "ENTRADA" },
                 { number: "∞", label: "COMUNHÃO" },
               ].map((stat, i) => (

@@ -31,7 +31,7 @@ export function CTASection() {
                     CARDÁPIO
                   </h3>
                   <p className="text-text-secondary mb-4">
-                    Costela, linguiça, acompanhamentos, bebidas e sobremesas.
+                    Costela, acompanhamentos, bebidas e sobremesas.
                     Veja o cardápio completo e faça seu pedido!
                   </p>
                   <span className="inline-flex items-center gap-2 text-accent-fire font-bold text-sm">

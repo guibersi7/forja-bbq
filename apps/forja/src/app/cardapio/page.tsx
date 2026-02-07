@@ -22,7 +22,7 @@ const foodItems: FoodItem[] = [
   {
     id: "forja-beef",
     name: "Forja Beef",
-    description: "R$ 22",
+    description: "Costela desfiada com vinagrete e farofa",
     price: 22,
     image: "/images/Forja-beef.webp",
     category: "Lanches",
@@ -30,7 +30,7 @@ const foodItems: FoodItem[] = [
   {
     id: "forja-pork",
     name: "Forja Pork",
-    description: "R$ 20",
+    description: "Costela de porco desfiada com cebolete e farofa agridoce",
     price: 20,
     image: "/images/Forja-Pork.webp",
     category: "Lanches",
@@ -38,7 +38,7 @@ const foodItems: FoodItem[] = [
   {
     id: "lanche-bbq",
     name: "Lanche BBQ",
-    description: "R$ 18",
+    description: "Pao brioche, hamburguer de costela",
     price: 18,
     image: "/images/Lanche-BBQ.webp",
     category: "Lanches",
@@ -46,7 +46,7 @@ const foodItems: FoodItem[] = [
   {
     id: "x-burger-kids",
     name: "X-Burger Kids",
-    description: "R$ 15",
+    description: "Pao brioche, hamburguer de costela e queijo",
     price: 15,
     image: "/images/Burguer-Kids.webp",
     category: "Lanches",
