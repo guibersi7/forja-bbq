@@ -51,44 +51,11 @@ const foodItems: FoodItem[] = [
     image: "/images/Burguer-Kids.webp",
     category: "Lanches",
   },
-  // Combos
-  {
-    id: "combo-beef",
-    name: "Forja Beef + Refrigerante",
-    description: "Combo com refrigerante (Economia de R$ 2,00)",
-    price: 28,
-    image: "/images/Forja-beef.webp",
-    category: "Combos",
-  },
-  {
-    id: "combo-pork",
-    name: "Forja Pork + Refrigerante",
-    description: "Combo com refrigerante (Economia de R$ 2,00)",
-    price: 26,
-    image: "/images/Forja-Pork.webp",
-    category: "Combos",
-  },
-  {
-    id: "combo-hamburguer",
-    name: "Hamburguer de Costela com Queijo + Refrigerante",
-    description: "Combo com refrigerante (Economia de R$ 2,00)",
-    price: 24,
-    image: "/images/Lanche-BBQ.webp",
-    category: "Combos",
-  },
-  {
-    id: "combo-lanche-costela",
-    name: "Lanche de Costela Desfiada + Refrigerante",
-    description: "Combo com refrigerante (Economia de R$ 2,00)",
-    price: 22,
-    image: "/images/Burguer-Kids.webp",
-    category: "Combos",
-  },
   // Bebidas
   {
     id: "refri-lata",
     name: "Refrigerante",
-    description: "R$ 8",
+    description: "Coca-Cola, Guaraná, Fanta e outros. Lata geladinha!",
     price: 8,
     image: "/images/refrigerante-1.webp",
     category: "Bebidas",
@@ -96,7 +63,7 @@ const foodItems: FoodItem[] = [
   {
     id: "agua",
     name: "Água",
-    description: "R$ 6",
+    description: "Água mineral gelada, com ou sem gás.",
     price: 6,
     image: "/images/agua.webp",
     category: "Bebidas",
@@ -104,7 +71,7 @@ const foodItems: FoodItem[] = [
   {
     id: "suco",
     name: "Suco",
-    description: "R$ 7",
+    description: "Sabores variados: uva, laranja e mais!",
     price: 7,
     image: "/images/suco.webp",
     category: "Bebidas",
@@ -136,7 +103,7 @@ const foodItems: FoodItem[] = [
   },
 ];
 
-const categories = ["Lanches", "Combos", "Bebidas", "Sobremesas"];
+const categories = ["Lanches", "Bebidas", "Sobremesas"];
 
 export default function CardapioPage() {
   const [cart, setCart] = useState<Record<string, number>>({});
