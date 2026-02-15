@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Forja BBQ",
   },
   description:
-    "Da brasa à mesa, para o Reino. Participe do Forja BBQ, o maior festival de costela da IGE! Toda arrecadação será destinada às obras de ampliação da igreja. 21 de Fevereiro, 14h às 21h no Rancho IGE.",
+    "Da brasa à mesa, para o Reino. Participe do Forja BBQ, o maior festival de costela da IGE! Toda arrecadação será destinada às obras de ampliação da igreja. 21 de Fevereiro, 14h às 20h no Rancho IGE.",
   keywords: [
     "Forja BBQ",
     "Festival da Costela",

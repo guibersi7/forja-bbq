@@ -111,7 +111,7 @@ export function Location() {
                     </svg>
                   ),
                   label: "HORÁRIO",
-                  value: "14h às 21h",
+                  value: "14h às 20h",
                   sub: "7 horas de evento",
                 },
                 {

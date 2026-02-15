@@ -36,18 +36,18 @@ const foodItems: FoodItem[] = [
     category: "Lanches",
   },
   {
-    id: "lanche-bbq",
-    name: "Lanche BBQ",
-    description: "Pao brioche, hamburguer de costela",
+    id: "hamburguer-costela",
+    name: "Hamburguer de Costela com Queijo",
+    description: "Hamburguer de costela com queijo",
     price: 18,
     image: "/images/Lanche-BBQ.webp",
     category: "Lanches",
   },
   {
-    id: "x-burger-kids",
-    name: "X-Burger Kids",
-    description: "Pao brioche, hamburguer de costela e queijo",
-    price: 15,
+    id: "lanche-costela",
+    name: "Lanche de Costela Desfiada",
+    description: "Lanche de costela desfiada",
+    price: 16,
     image: "/images/Burguer-Kids.webp",
     category: "Lanches",
   },
@@ -69,18 +69,18 @@ const foodItems: FoodItem[] = [
     category: "Combos",
   },
   {
-    id: "combo-bbq",
-    name: "Lanche BBQ + Refrigerante",
+    id: "combo-hamburguer",
+    name: "Hamburguer de Costela com Queijo + Refrigerante",
     description: "Combo com refrigerante (Economia de R$ 2,00)",
     price: 24,
     image: "/images/Lanche-BBQ.webp",
     category: "Combos",
   },
   {
-    id: "combo-kids",
-    name: "X-Burger Kids + Refrigerante",
+    id: "combo-lanche-costela",
+    name: "Lanche de Costela Desfiada + Refrigerante",
     description: "Combo com refrigerante (Economia de R$ 2,00)",
-    price: 21,
+    price: 22,
     image: "/images/Burguer-Kids.webp",
     category: "Combos",
   },
@@ -109,9 +109,34 @@ const foodItems: FoodItem[] = [
     image: "/images/suco.webp",
     category: "Bebidas",
   },
+  // Sobremesas
+  {
+    id: "pudim",
+    name: "Pudim",
+    description: "Pudim caseiro",
+    price: 8,
+    image: "/images/pudim.webp",
+    category: "Sobremesas",
+  },
+  {
+    id: "brigadeiro",
+    name: "Brigadeiro",
+    description: "Brigadeiro tradicional",
+    price: 4,
+    image: "/images/brigadeiro.webp",
+    category: "Sobremesas",
+  },
+  {
+    id: "brigadeiro-ninho",
+    name: "Brigadeiro de Ninho",
+    description: "Brigadeiro de leite ninho",
+    price: 4,
+    image: "/images/brigadeiro-ninho.webp",
+    category: "Sobremesas",
+  },
 ];
 
-const categories = ["Lanches", "Combos", "Bebidas"];
+const categories = ["Lanches", "Combos", "Bebidas", "Sobremesas"];
 
 export default function CardapioPage() {
   const [cart, setCart] = useState<Record<string, number>>({});

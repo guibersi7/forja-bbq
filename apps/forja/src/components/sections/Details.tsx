@@ -102,7 +102,7 @@ export function Details() {
                   </div>
                   <div>
                     <p className="text-2xl md:text-3xl font-black text-accent-fire">
-                      21H
+                      20H
                     </p>
                     <p className="text-[10px] text-text-secondary tracking-wider">
                       FIM

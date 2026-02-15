@@ -28,9 +28,8 @@ function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-bg-primary/95 backdrop-blur-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-bg-primary/95 backdrop-blur-md" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -365,7 +364,7 @@ function EventosSection() {
               </div>
               <div className="flex-1 text-center md:text-left">
                 <span className="text-[#FF5E00] text-sm font-bold tracking-wider">
-                  21 DE FEVEREIRO • 14H ÀS 21H
+                  21 DE FEVEREIRO • 14H ÀS 20H
                 </span>
                 <h3 className="text-3xl md:text-4xl font-black text-white mt-2 mb-4 group-hover:text-[#FF5E00] transition-colors font-display">
                   FORJA BBQ

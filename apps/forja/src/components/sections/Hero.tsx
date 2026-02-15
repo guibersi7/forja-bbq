@@ -49,7 +49,7 @@ export function Hero() {
             <span className="hidden md:block text-accent-metal">|</span>
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-accent-fire rounded-full" />
-              14H ÀS 21H
+              14H ÀS 20H
             </span>
             <span className="hidden md:block text-accent-metal">|</span>
             <span className="flex items-center gap-2">
