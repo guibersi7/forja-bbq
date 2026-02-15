@@ -112,7 +112,7 @@ export function Location() {
                   ),
                   label: "HORÁRIO",
                   value: "14h às 20h",
-                  sub: "7 horas de evento",
+                  sub: "6 horas de evento",
                 },
                 {
                   icon: (
