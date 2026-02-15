@@ -92,7 +92,7 @@ export function Location() {
                   ),
                   label: "DATA",
                   value: "21 de Fevereiro de 2025",
-                  sub: "Sexta-feira",
+                  sub: "Sábado",
                 },
                 {
                   icon: (

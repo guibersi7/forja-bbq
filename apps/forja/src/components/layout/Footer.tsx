@@ -44,7 +44,7 @@ export function Footer() {
           {/* Date */}
           <div className="text-center md:text-right">
             <p className="text-accent-fire font-black text-2xl">21.02.25</p>
-            <p className="text-text-secondary text-xs tracking-wider">14H - 21H</p>
+            <p className="text-text-secondary text-xs tracking-wider">14H - 20H</p>
           </div>
         </div>
 
