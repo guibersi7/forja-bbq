@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Minus, Plus, ShoppingBag, ArrowLeft } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5515997008154";
+const WHATSAPP_NUMBER = "5515991412790";
 
 interface FoodItem {
   id: string;

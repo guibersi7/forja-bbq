@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Gamepad2, Heart, ShieldCheck, Ticket } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-const WHATSAPP_NUMBER = "5515997008154";
+const WHATSAPP_NUMBER = "5515991412790";
 const PASSAPORTE_PRICE = 25;
 
 const features = [

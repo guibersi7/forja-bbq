@@ -68,7 +68,7 @@ Import from `@ige/ui` or specific subpaths: `@ige/ui/button`, `@ige/ui/card`, `@
 - **Lucide React** for icons
 - **TypeScript** in strict mode; path alias `@/*` → `./src/*`
 - **shadcn/ui** configured in church app (`components.json` with new-york style, RSC enabled)
-- WhatsApp ordering uses phone number `5515997008154` hardcoded in forja cardapio/ige-kids pages
+- WhatsApp ordering uses phone number `5515991412790` hardcoded in forja cardapio/ige-kids pages
 - Event date: `2026-02-21` (used in countdown timers)
 
 ## Styling Conventions

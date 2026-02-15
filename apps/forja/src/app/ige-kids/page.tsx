@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Minus, Plus, Ticket, ArrowLeft, Star, Check } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5515997008154";
+const WHATSAPP_NUMBER = "5515991412790";
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
