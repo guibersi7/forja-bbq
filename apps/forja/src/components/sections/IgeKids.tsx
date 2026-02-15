@@ -3,6 +3,7 @@ import { Gamepad2, Heart, ShieldCheck, Ticket } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const WHATSAPP_NUMBER = "5515997008154";
+const PASSAPORTE_PRICE = 25;
 
 const features = [
   {
@@ -50,11 +51,14 @@ export function IgeKids() {
             <h2 className="text-4xl md:text-5xl font-black text-text-primary mb-6">
               IGE KIDS
             </h2>
-            <p className="text-text-secondary text-lg leading-relaxed mb-8">
+            <p className="text-text-secondary text-lg leading-relaxed mb-4">
               Pensamos em tudo para que você e sua família tenham um dia
               incrível! O <strong>IGE KIDS</strong> é um espaço exclusivo com
               brinquedos infláveis e muita diversão para as crianças gastarem
               energia enquanto os pais aproveitam o melhor churrasco e comunhão.
+            </p>
+            <p className="text-text-secondary text-lg leading-relaxed mb-8">
+              Com o <strong className="text-accent-fire">Passaporte Único por apenas R$ {PASSAPORTE_PRICE},00</strong>, seu filho(a) tem acesso a <strong>todos os brinquedos</strong> durante o evento inteiro. Sem limite de vezes, sem preocupação!
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -72,7 +76,7 @@ export function IgeKids() {
             </div>
 
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Gostaria de garantir acesso ao IGE KIDS.")}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`🎟️ Olá! Gostaria de saber mais sobre o Passaporte Único IGE Kids (R$ ${PASSAPORTE_PRICE},00) para o Forja BBQ!`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-accent-fire text-white font-bold rounded-full hover:bg-accent-fire-hover transition-colors"
