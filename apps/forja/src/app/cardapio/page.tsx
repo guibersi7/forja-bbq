@@ -40,7 +40,7 @@ const foodItems: FoodItem[] = [
     name: "Hamburguer de Costela com Queijo",
     description: "Hamburguer de costela com queijo",
     price: 18,
-    image: "/images/Lanche-BBQ.webp",
+    image: "/images/Burguer-Kids.webp",
     category: "Lanches",
   },
   {
@@ -48,7 +48,7 @@ const foodItems: FoodItem[] = [
     name: "Lanche de Costela Desfiada",
     description: "Lanche de costela desfiada",
     price: 16,
-    image: "/images/Burguer-Kids.webp",
+    image: "/images/Lanche-BBQ.webp",
     category: "Lanches",
   },
   // Bebidas

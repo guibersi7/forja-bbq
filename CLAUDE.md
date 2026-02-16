@@ -64,12 +64,30 @@ Import from `@ige/ui` or specific subpaths: `@ige/ui/button`, `@ige/ui/card`, `@
 
 - **React 19** + **Next.js 16** with App Router (all pages use `src/app/` convention)
 - **Tailwind CSS v4** with PostCSS (`@tailwindcss/postcss`), no `tailwind.config.js` — themes are defined via CSS custom properties in each app's `globals.css`
-- **Framer Motion** for scroll-triggered animations (`useInView` pattern used extensively)
 - **Lucide React** for icons
 - **TypeScript** in strict mode; path alias `@/*` → `./src/*`
 - **shadcn/ui** configured in church app (`components.json` with new-york style, RSC enabled)
 - WhatsApp ordering uses phone number `5515991412790` hardcoded in forja cardapio/ige-kids pages
 - Event date: `2026-02-21` (used in countdown timers)
+- **No test framework** configured — no jest, vitest, or similar
+
+## Animation Strategy
+
+**Forja app** uses a tiered approach:
+1. **ScrollReveal** (`src/components/ui/ScrollReveal.tsx`) — lightweight "use client" wrapper using native IntersectionObserver + CSS transitions. Used by 6 section components (About, CTASection, Forja, Details, Location, IgeKids), allowing them to remain Server Components.
+2. **`motion/react`** (from the `motion` npm package, NOT `framer-motion`) — only used in pages with complex animations: cardapio, ige-kids, Hero, Header.
+3. **Pure CSS animations** — Hero uses keyframe animations defined in `globals.css` (`.animate-hero-fade-in`, `.animate-hero-fade-up`).
+
+**Church app** still uses `framer-motion` directly — not yet migrated to the `motion` package.
+
+New sections that only need scroll-reveal should use `ScrollReveal` instead of `motion/react`.
+
+## Performance Patterns
+
+- Below-fold sections in forja `page.tsx` are lazy-loaded with `next/dynamic`
+- `backdrop-blur` and SVG noise overlay disabled on mobile (`md:` prefix) to reduce GPU overhead
+- All images converted to WebP format
+- `@vercel/speed-insights` integrated in forja app
 
 ## Styling Conventions
 
