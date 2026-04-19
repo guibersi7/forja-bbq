@@ -146,13 +146,13 @@ export function IntroVideoModal() {
         aria-labelledby="forja-intro-title"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between bg-gradient-to-b from-black/70 to-transparent p-3">
+        <div className="relative z-10 flex items-center justify-between border-b border-line-soft bg-bg-secondary/95 px-3 py-2.5">
           <p id="forja-intro-title" className="text-[10px] font-semibold uppercase tracking-[0.24em] text-text-primary/95">
             FORJA M4 | O VALE DA DECISÃO
           </p>
           <button
             type="button"
-            className="rounded-full border border-line-soft bg-black/30 p-1.5 text-text-secondary transition-colors hover:text-text-primary"
+            className="rounded-full border border-line-soft bg-black/40 p-1.5 text-text-secondary transition-colors hover:text-text-primary"
             aria-label="Fechar vídeo de abertura"
             onClick={closeModal}
           >
@@ -160,7 +160,7 @@ export function IntroVideoModal() {
           </button>
         </div>
 
-        <div className="relative flex h-[68vh] w-full items-center justify-center bg-black sm:h-[76vh] lg:h-[90vh]">
+        <div className="relative flex h-[65vh] w-full items-center justify-center bg-black sm:h-[73vh] lg:h-[84vh]">
           <div
             className={`absolute inset-0 bg-contain bg-center bg-no-repeat transition-opacity duration-300 ${
               videoReady && !videoError ? "opacity-0" : "opacity-100"
