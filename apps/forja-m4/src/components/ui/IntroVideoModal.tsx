@@ -188,7 +188,6 @@ export function IntroVideoModal() {
               setVideoReady(false);
             }}
           >
-            <source src="/videos/forja-m4-intro.webm" type="video/webm" />
             <source src="/videos/forja-m4-intro.mp4" type="video/mp4" />
             <source src="/videos/forja-m4-intro.mov" type="video/quicktime" />
           </video>
