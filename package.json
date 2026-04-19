@@ -13,8 +13,10 @@
     "clean": "turbo clean && rm -rf node_modules",
     "dev:church": "turbo dev --filter=@ige/church",
     "dev:forja": "turbo dev --filter=@ige/forja",
+    "dev:forja-m4": "turbo dev --filter=@ige/forja-m4",
     "build:church": "turbo build --filter=@ige/church",
-    "build:forja": "turbo build --filter=@ige/forja"
+    "build:forja": "turbo build --filter=@ige/forja",
+    "build:forja-m4": "turbo build --filter=@ige/forja-m4"
   },
   "devDependencies": {
     "turbo": "^2.5.4"

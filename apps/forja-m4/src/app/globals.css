@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --font-body: "Trebuchet MS", "Segoe UI", "Tahoma", sans-serif;
+  --font-display: "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  --bg-primary: #090b09;
+  --bg-secondary: #101612;
+  --bg-elevated: #161f18;
+  --text-primary: #ecf0e7;
+  --text-secondary: #a8b2a1;
+  --text-muted: #7f8a7b;
+  --accent-olive: #5f7348;
+  --accent-olive-bright: #8ea96a;
+  --accent-steel: #7b8375;
+  --line-soft: rgba(180, 194, 172, 0.2);
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-olive: var(--accent-olive);
+  --color-accent-olive-bright: var(--accent-olive-bright);
+  --color-accent-steel: var(--accent-steel);
+  --color-line-soft: var(--line-soft);
+}
+
+@layer base {
+  * {
+    border-color: var(--line-soft);
+  }
+
+  html {
+    background: var(--bg-primary);
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-sans;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(95, 115, 72, 0.22), transparent 34%),
+      radial-gradient(circle at 80% 10%, rgba(123, 131, 117, 0.12), transparent 38%),
+      linear-gradient(180deg, #0b100b 0%, #090b09 60%, #050605 100%);
+  }
+
+  ::selection {
+    background: rgba(142, 169, 106, 0.35);
+    color: #fff;
+  }
+}
+
+.section-frame {
+  border-block: 1px solid rgba(180, 194, 172, 0.14);
+  background-image:
+    linear-gradient(90deg, transparent 0%, rgba(142, 169, 106, 0.14) 50%, transparent 100%);
+  background-size: 100% 1px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.manifesto-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(142, 169, 106, 0.18), transparent 70%);
+}
+
+.metal-grid {
+  position: relative;
+}
+
+.metal-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(150, 165, 140, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(150, 165, 140, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.35;
+}
+
+.countdown-number {
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 20px rgba(142, 169, 106, 0.4);
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulse-border {
+  0%,
+  100% {
+    border-color: rgba(142, 169, 106, 0.35);
+  }
+  50% {
+    border-color: rgba(142, 169, 106, 0.75);
+  }
+}
+
+.pulse-border {
+  animation: pulse-border 2.2s ease-in-out infinite;
+}
