@@ -1,4 +1,5 @@
 import { CountdownGate } from "@/components/ui/CountdownGate";
+import { IntroVideoTriggerButton } from "@/components/ui/IntroVideoTriggerButton";
 import { HeroVideo } from "@/components/ui/HeroVideo";
 
 export function HeroSection() {
@@ -21,6 +22,10 @@ export function HeroSection() {
         <p className="mt-5 max-w-[34ch] text-lg leading-tight text-text-secondary sm:text-2xl">
           Deus já decidiu te chamar. Agora você decide se vai responder.
         </p>
+
+        <div className="mt-4">
+          <IntroVideoTriggerButton />
+        </div>
 
         <div className="mt-8 max-w-[780px] rounded-2xl border border-line-soft bg-black/45 p-4 backdrop-blur-sm sm:p-6">
           <CountdownGate />
