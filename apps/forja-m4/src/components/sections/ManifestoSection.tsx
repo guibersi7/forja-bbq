@@ -31,8 +31,8 @@ export function ManifestoSection() {
             </div>
 
             <div className="mt-6 border-t border-line-soft pt-4 text-sm uppercase tracking-[0.2em] text-text-muted">
-              Quando as inscrições forem liberadas, clique em{' '}
-              <strong className="text-accent-olive-bright">A HORA É AGORA!</strong> na seção acima para abrir o formulário.
+              As inscrições já estão liberadas. Clique em{' '}
+              <strong className="text-accent-olive-bright">A HORA É AGORA!</strong> na seção acima para ir direto ao formulário.
             </div>
           </div>
         </div>
