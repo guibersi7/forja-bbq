@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ige-monorepo
 
-## Getting Started
+A Turborepo workspace running three Next.js 16 sites from one codebase, on a shared
+UI package and a single Tailwind/TypeScript config.
 
-First, run the development server:
+The three sites started as separate projects with their own setup, their own copy of
+the same components, and dependencies that drifted apart version by version. They now
+share one dependency tree, one component library, and one build pipeline, while each
+app keeps its own routes, content, and deploy target.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Apps
+
+| Workspace | Dev port | Notes |
+|---|---|---|
+| `@ige/church` | 3000 | Church site. Framer Motion for page transitions. |
+| `@ige/forja` | 3001 | Forja BBQ site. Motion, Vercel Speed Insights. |
+| `@ige/forja-m4` | 3002 | Form-heavy sibling site: react-hook-form with Zod validation. |
+
+## Packages
+
+| Workspace | What it holds |
+|---|---|
+| `@ige/ui` | Shared components: `button`, `card`, `sheet`, `navigation-menu`, plus the `cn` class merger. Built on Radix primitives with class-variance-authority and tailwind-merge. Exported per component, so an app importing a button doesn't pull in the dialog. |
+| `@ige/config` | The Tailwind config and the base `tsconfig`, exported as `@ige/config/tailwind` and `@ige/config/typescript`. |
+
+Both are private workspace packages consumed through the `*` version range, so there
+is no publish step and no version bumping between the apps and the library.
+
+## Layout
+
+```
+apps/
+  church/      @ige/church      Next.js 16, React 19
+  forja/       @ige/forja
+  forja-m4/    @ige/forja-m4
+packages/
+  ui/          @ige/ui          shared components
+  config/      @ige/config      tailwind + tsconfig
+turbo.json                      task graph
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running it
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requires Node 18+ and npm 10.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install          # installs every workspace at once
+npm run dev          # all three apps, ports 3000-3002
+npm run build        # builds everything, respecting the dependency graph
+npm run lint
+```
 
-## Learn More
+One app at a time, which is what you usually want:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev:church
+npm run dev:forja
+npm run dev:forja-m4
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Same pattern for builds: `npm run build:church`, and so on. These are
+`turbo --filter` calls, so a filtered build still builds `@ige/ui` first if it
+changed and skips it if it didn't.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How the task graph works
 
-## Deploy on Vercel
+`turbo.json` declares four tasks:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`build`** depends on `^build`, so `@ige/ui` builds before any app that imports it.
+  Outputs are cached from `.next/**`, excluding `.next/cache/**`. `.env*` files count
+  as inputs, so changing an environment variable correctly busts the cache.
+- **`lint`** depends on `^lint`, same ordering rule.
+- **`dev`** is `persistent` and uncached, since it never terminates.
+- **`clean`** is uncached.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The practical effect: touching a component in `packages/ui` rebuilds all three apps,
+touching a route in `apps/forja` rebuilds only that one, and touching nothing replays
+from cache.
+
+## Stack
+
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Radix UI · Turborepo 2.5 · npm workspaces
